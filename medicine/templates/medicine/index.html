@@ -1,0 +1,20 @@
+<!DOCTYPE onloadedmetadata="html">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+  {% if all_albums %}
+  <h3>Albums</h3>
+  <title>medicine</title>
+    <ul>
+      {% for album in all_albums %}
+      <li><a href="/medicine/{{ album.id }}/">  {{album.album_title}} </a></li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <h3>No Album</h3>
+    {% endif %}
+</body>
+</html>
